@@ -1,0 +1,68 @@
+@import "src/assets/scss/variables";
+
+.datePicker {
+	font-size: 16px !important;
+	padding: 19px 30px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 40px;
+	border-color: $border-grey;
+	height: 64px;
+
+	&_accent {
+		padding: 15px 30px;
+
+		input {
+			font-size: 20px !important;
+			font-weight: 700;
+		}
+	}
+
+	@media screen and (max-width: $mobile-size) {
+		padding: 10px 20px;
+	}
+
+	input {
+		font-size: 16px !important;
+		color: $dark-green !important;
+
+		&::placeholder {
+			color: $border-grey;
+		}
+	}
+
+	&:hover {
+		border-color: $green;
+	}
+}
+
+.dropdownClassName {
+	:global {
+		.ant-picker-header,
+		.ant-picker-footer {
+			padding: 10px 8px;
+
+			.ant-picker-today-btn {
+				color: $green;
+			}
+		}
+
+		.ant-picker-cell-inner {
+			display: flex !important;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.ant-picker-cell-inner {
+			&::before {
+				border-color: $green !important;
+			}
+		}
+
+		.ant-picker-cell-in-view.ant-picker-cell-selected {
+			.ant-picker-cell-inner {
+				background-color: $green !important;
+			}
+		}
+	}
+}

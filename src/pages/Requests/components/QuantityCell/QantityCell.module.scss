@@ -1,0 +1,24 @@
+@import "src/assets/scss/variables";
+
+.wrapper {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	overflow: visible !important;
+	width: auto !important;
+	@media screen and (max-width: $mobile-size) {
+		gap: 5px;
+	}
+}
+
+.counter {
+	min-width: 37px;
+	text-align: center;
+
+	&_disabled {
+		min-width: auto;
+	}
+	@media screen and (max-width: $mobile-size) {
+		min-width: 30px;
+	}
+}

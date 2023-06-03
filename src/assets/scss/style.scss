@@ -1,0 +1,39 @@
+@import "_fonts";
+@import "_variables";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	outline: none;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: "GothamPro" !important;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: $white;
+	margin: 0;
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $scrollbar-grey;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $green;
+	}
+}

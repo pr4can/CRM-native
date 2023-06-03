@@ -1,0 +1,15 @@
+@import "src/assets/scss/variables";
+
+.label {
+	display: inline-block;
+	font-size: 14px;
+	color: $green;
+	margin: 0 30px 15px;
+	@media screen and (max-width: $mobile-size) {
+		margin: 0 15px 10px;
+	}
+
+	&_noInput {
+		margin-left: 0;
+	}
+}

@@ -1,0 +1,31 @@
+@import "src/assets/scss/variables";
+
+.topBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    flex-wrap: wrap;
+	gap: 50px;
+	margin: 0 0 30px;
+
+	&__alignTop {
+		align-items: flex-start;
+	}
+
+	&__alignBottom {
+		align-items: flex-end;
+	}
+
+	&__alignCenter {
+		align-items: center;
+	}
+
+	&__alignEnd {
+		justify-content: flex-end;
+	}
+	@media screen and (max-width: $mobile-size) {
+		flex-direction: column;
+        gap: 0px;
+		margin-bottom: 30px;
+	}
+}

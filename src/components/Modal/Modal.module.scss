@@ -1,0 +1,42 @@
+@import "src/assets/scss/_variables.scss";
+
+.modal {
+	width: 100% !important;
+	max-width: 340px !important;
+	:global {
+		.ant-modal-content {
+			padding: 30px;
+			border-radius: 20px;
+		}
+		.ant-modal-close-x {
+			color: $dark-green;
+		}
+		.ant-modal-header {
+            max-width: 230px;
+			margin: 0 auto 30px;
+		}
+		.ant-modal-title {
+			font-weight: 700;
+			font-size: 16px;
+			color: $dark-green;
+			text-align: center;
+		}
+		.ant-modal-footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+		}
+	}
+	&__btn {
+		padding: 10px 15px;
+		min-width: 135px;
+        &_light {
+            color: $dark-green;
+            background-color: $border-grey;
+            &:hover {
+                color: $dark-green !important;
+            }
+        }
+	}
+}

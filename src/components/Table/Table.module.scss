@@ -1,0 +1,166 @@
+@import "src/assets/scss/variables";
+
+.table {
+	:global {
+		.ant-table-body {
+			overflow-y: auto !important;
+
+			&::-webkit-scrollbar {
+				width: 6px;
+				height: 6px;
+			}
+
+			&::-webkit-scrollbar-track {
+				background: $scrollbar-grey;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: $green;
+			}
+		}
+
+		thead {
+			.ant-table-cell {
+				background: transparent !important;
+				border-bottom: none !important;
+				color: $light-green !important;
+				font-size: 14px !important;
+				font-weight: 400 !important;
+
+				&::before {
+					content: none !important;
+				}
+			}
+
+			.anticon {
+				color: $light-green;
+
+				&.active {
+					color: $green;
+				}
+			}
+		}
+
+		.ant-table-selection-col {
+			width: 50px !important;
+		}
+
+		tbody {
+			.ant-table-row {
+				height: 50px !important;
+				-webkit-border-radius: 25px;
+				-moz-border-radius: 25px;
+				border-radius: 25px;
+				overflow: hidden;
+				background-color: $light-grey;
+
+				&:nth-child(even) {
+					background-color: $light-grey;
+				}
+
+				&:nth-child(odd) {
+					background-color: $white;
+				}
+			}
+
+			.ant-table-row-selected {
+				.ant-table-cell {
+					background-color: inherit !important;
+				}
+			}
+
+			.ant-table-cell {
+				padding: 0 15px !important;
+				border-bottom: none !important;
+				height: 50px !important;
+				color: $dark-green;
+				background: transparent !important;
+				@media screen and (max-width: $mobile-size) {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					padding: 0 7.5px !important;
+				}
+
+				&:first-child {
+					-webkit-border-radius: 25px 0 0 25px !important;
+					-moz-border-radius: 25px 0 0 25px !important;
+					border-radius: 25px 0 0 25px !important;
+					@media screen and (max-width: $mobile-size) {
+						padding-left: 15px !important;
+					}
+				}
+
+				&:last-child {
+					-webkit-border-radius: 0 25px 25px 0 !important;
+					-moz-border-radius: 0 25px 25px 0 !important;
+					border-radius: 0 25px 25px 0 !important;
+					@media screen and (max-width: $mobile-size) {
+						padding-right: 15px !important;
+					}
+				}
+			}
+
+			.ant-table-selection-column {
+				padding-right: 0 !important;
+				padding-left: 14px !important;
+			}
+
+			.ant-checkbox-wrapper {
+				font-size: 18px;
+				padding: 6px;
+
+				.ant-checkbox-input {
+					&::after {
+						border-color: $green !important;
+					}
+				}
+
+				.ant-checkbox-inner {
+					width: 24px;
+					height: 24px;
+					border-color: $green !important;
+					background-color: transparent !important;
+
+					&::after {
+						content: none;
+					}
+
+					&::before {
+						content: "";
+						width: 18px;
+						height: 18px;
+						background-color: $green;
+						position: absolute;
+						-webkit-border-radius: 3px;
+						-moz-border-radius: 3px;
+						border-radius: 3px;
+						top: 50%;
+						left: 50%;
+						z-index: 1;
+						transform: translate(-50%, -50%);
+						opacity: 0;
+
+						transition: opacity 0.25s ease-in;
+					}
+				}
+			}
+
+			.ant-checkbox-checked {
+				.ant-checkbox-inner::before {
+					opacity: 1;
+				}
+
+				&:not(.ant-checkbox-disabled):after {
+					border: 1px solid $green !important;
+				}
+			}
+		}
+
+		.ant-spin-dot-spin {
+			> i {
+				background-color: $green;
+			}
+		}
+	}
+}

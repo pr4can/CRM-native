@@ -1,0 +1,62 @@
+@import "src/assets/scss/variables";
+
+.filterHead {
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		font-size: 14px;
+		color: $light-green;
+		line-height: 1 !important;
+	}
+}
+
+.input {
+	padding: 5px 10px;
+	border-radius: 15px;
+	font-size: 14px;
+	line-height: 1 !important;
+	color: $light-green;
+	border: 1px solid $border-grey;
+	margin: 10px 0 0;
+	&:focus,
+	&:hover {
+		box-shadow: none;
+		border-color: $dark-green;
+	}
+
+	&:-webkit-autofill {
+		&,
+		&:hover,
+		&:focus {
+			-webkit-box-shadow: 0 0 0px 1000px $light-grey inset;
+		}
+	}
+
+	&::placeholder {
+		color: $green;
+	}
+}
+
+.select {
+    width: 100%;
+    margin: 10px 0 0;
+}
+
+.sort {
+	&__arrow {
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+		&_up {
+			margin-bottom: -4.5px;
+		}
+		&_down {
+			margin-top: -4.5px;
+		}
+		&__active {
+			color: $dark-green !important;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+@import "src/assets/scss/variables";
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin: 60px 0;
+}
+
+.wrapper {
+	display: flex;
+	gap: 10px;
+	align-items: flex-end;
+	flex-grow: 1;
+}
+
+.request {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 240px;
+
+	:global {
+		.ant-select-selection-item {
+			padding: 16px 30px !important;
+		}
+
+		.ant-select-selection-placeholder {
+			padding-inline-end: 0;
+			padding: 16px 30px !important;
+		}
+	}
+}
+
+.date {
+	display: flex;
+	flex-direction: column;
+}
+
+.buttonsWrapper {
+	display: flex;
+	gap: 10px;
+}
+
+.tableStatus {
+	color: $green;
+	font-size: 16px;
+}
+
+.toolbar {
+	align-items: flex-end;
+}

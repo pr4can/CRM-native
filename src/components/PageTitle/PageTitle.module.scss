@@ -1,0 +1,14 @@
+@import "src/assets/scss/variables";
+
+.title {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	font-size: 24px !important;
+	color: $dark-green !important;
+	font-weight: 900 !important;
+	margin: 0 !important;
+    @media screen and (max-width: $mobile-size) {
+        margin-bottom: 15px !important;
+    }
+}

@@ -1,0 +1,16 @@
+@import "src/assets/scss/variables";
+
+.notFound {
+    max-width: 685px;
+    margin: auto;
+    &__img {
+        margin-bottom: 50px;
+    }
+    &__title {
+        font-weight: 900;
+        font-size: 24px;
+        color: $dark-green;
+        text-align: center;
+        margin: 0;
+    }
+}

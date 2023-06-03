@@ -1,0 +1,32 @@
+@import "src/assets/scss/variables";
+
+.iconButton {
+	position: relative;
+	cursor: pointer;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+
+	&[data-text] {
+		&::after {
+			display: none;
+			content: attr(data-text);
+			position: absolute;
+			top: calc(100% + 2px);
+			right: 10px;
+			font-size: 14px;
+			color: $green;
+			padding: 5px 10px;
+			border-radius: 30px;
+			background-color: $white;
+			box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.1);
+			z-index: 1;
+		}
+
+		&:hover {
+			&::after {
+				display: block;
+			}
+		}
+	}
+}

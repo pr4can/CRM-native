@@ -1,0 +1,68 @@
+@import "src/assets/scss/variables";
+
+.layout {
+	min-height: 100vh;
+	height: 100%;
+	width: 100vw;
+	@media screen and (max-width: $mobile-size) {
+		flex-direction: column !important;
+	}
+	&__main {
+		@media screen and (max-width: $mobile-size) {
+			width: 100% !important;
+		}
+	}
+}
+
+.sider {
+	background: $light-grey !important;
+	max-width: 360px !important;
+	width: 100% !important;
+	flex: 0 0 360px !important;
+	padding: 60px 40px 60px 60px !important;
+	@media screen and (max-width: $mobile-size) {
+		flex: 0 0 auto !important;
+		height: auto !important;
+		padding: 20px !important;
+		max-width: 100% !important;
+	}
+
+	:global {
+		.ant-layout-sider-children {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
+			@media screen and (max-width: $mobile-size) {
+				flex-direction: row;
+				align-items: center;
+				height: auto;
+			}
+		}
+	}
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	padding: 60px 60px 50px;
+	min-height: 280px;
+	background-color: $white;
+	@media screen and (max-width: $mobile-size) {
+		padding: 15px 20px;
+	}
+}
+
+.exit {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	box-shadow: none;
+	font-size: 16px;
+	color: $green-btn;
+
+	&:hover {
+		font-weight: 900;
+		color: $dark-green !important;
+	}
+}

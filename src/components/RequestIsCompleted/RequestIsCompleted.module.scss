@@ -1,0 +1,27 @@
+@import "src/assets/scss/variables";
+
+.wrapper {
+	padding-bottom: 16px;
+	display: flex;
+	align-items: center;
+	color: $green;
+	text-align: center;
+	margin-right: 10px;
+	font-weight: 500;
+	line-height: 1.25;
+
+	&_noPadding {
+		padding: 0;
+	}
+
+	&_noMargin {
+		margin: 0;
+	}
+
+	@media screen and (max-width: $mobile-size) {
+		margin-right: 0;
+		padding-bottom: 15px;
+		width: 100%;
+		justify-content: center;
+	}
+}

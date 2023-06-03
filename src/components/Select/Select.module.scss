@@ -1,0 +1,97 @@
+@import "src/assets/scss/variables";
+
+:global {
+	.ant-select-focused:where(.css-dev-only-do-not-override-o4kdzv).ant-select:not(.ant-select-disabled):not(
+			.ant-select-customize-input
+		):not(.ant-pagination-size-changer)
+		.ant-select-selector {
+		box-shadow: none !important;
+		border-color: $dark-green !important;
+	}
+}
+
+.select {
+	&:focus,
+	&:hover {
+		:global {
+			.ant-select-selector {
+				box-shadow: none !important;
+				border-color: $dark-green !important;
+			}
+		}
+	}
+
+	:global {
+		.ant-select-selector {
+			padding: 0 !important;
+			height: auto !important;
+			border-radius: 40px;
+			font-size: 16px;
+			color: $dark-green;
+			border: 1px solid #dad7cd;
+		}
+
+		.ant-select-selection-item {
+			padding: 19.5px 30px !important;
+		}
+
+		.ant-select-arrow {
+			inset-inline-end: 20px;
+		}
+
+		.ant-select-selection-placeholder {
+			padding-inline-end: 0;
+			padding: 19.5px 30px !important;
+		}
+	}
+
+	&__dropdown {
+		:global {
+			padding: 10px;
+			border-radius: 20px;
+
+			.ant-select-item {
+				padding: 10px 15px;
+				border-radius: 0;
+
+				&:first-child {
+					border-radius: 10px 10px 0 0;
+				}
+
+				&:last-child {
+					border-radius: 0 0 10px 10px;
+				}
+			}
+
+			.ant-select-item-option-selected {
+				color: $green !important;
+				background-color: $light-grey !important;
+			}
+
+			.rc-virtual-list-scrollbar-thumb {
+				background: $dark-green !important;
+			}
+
+			.anticon-check {
+				color: $green;
+			}
+		}
+	}
+}
+
+.select:global(.ant-select-multiple) {
+	:global {
+		.ant-select-selection-overflow {
+			height: 55px;
+			overflow: hidden;
+			padding: 0 35px 0 20px;
+			margin: 7px 0 7px 0;
+		}
+
+		.ant-select-selection-item {
+			padding: 0 !important;
+			background: #f0f2ec;
+			color: $dark-green;
+		}
+	}
+}
